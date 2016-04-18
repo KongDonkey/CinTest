@@ -12,6 +12,7 @@ import javax.persistence.ManyToOne;
 public class Seance implements Comparable<Seance>{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int idSeance;
 	private Seance seance;
 	private Movie movie;
 	private Time startTime;

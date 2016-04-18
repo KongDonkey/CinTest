@@ -17,7 +17,9 @@ public class Main {
 //		schedule.getSchedule().add(seance);
 //		session.persist(schedule);
 		
-		
+		System.out.println("1");
+		System.out.println("1");
+		System.out.println("1");
 		session.getTransaction().commit();
 
 		session.close();

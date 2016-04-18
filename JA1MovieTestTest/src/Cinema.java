@@ -16,13 +16,20 @@ import java.util.Map.Entry;
 import java.util.TreeMap;
 import java.util.TreeSet;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+@Entity
 public class Cinema {
-	TreeMap<Days, Schedule> cinema;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int idCinema;
+	TreeMap<Days, Schedule> cinema = new TreeMap<>();
 	Time open = new Time(9, 0);
 	Time close = new Time(23, 0);
 
-	public Cinema() {
-		this.cinema = new TreeMap<Days, Schedule>();
+	public Cinema() {		
 	}
 
 	public void cinemaFeel2() {
