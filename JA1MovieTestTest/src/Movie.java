@@ -1,11 +1,27 @@
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
-public class Movie{
+@Entity
+public class Movie {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int idMovie;
 	private String title;
 	private Time duration;
 
 	public Movie(String title, int hour, int min) {
 		this.title = title;
 		this.duration = new Time(hour, min);
+	}
+
+	public int getIdMovie() {
+		return idMovie;
+	}
+
+	public void setIdMovie(int idMovie) {
+		this.idMovie = idMovie;
 	}
 
 	public String getTitle() {

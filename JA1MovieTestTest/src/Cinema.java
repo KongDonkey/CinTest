@@ -20,6 +20,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
 @Entity
 public class Cinema {
 	@Id
@@ -29,7 +30,39 @@ public class Cinema {
 	Time open = new Time(9, 0);
 	Time close = new Time(23, 0);
 
-	public Cinema() {		
+	public Cinema() {
+	}
+
+	public int getIdCinema() {
+		return idCinema;
+	}
+
+	public void setIdCinema(int idCinema) {
+		this.idCinema = idCinema;
+	}
+
+	public TreeMap<Days, Schedule> getCinema() {
+		return cinema;
+	}
+
+	public void setCinema(TreeMap<Days, Schedule> cinema) {
+		this.cinema = cinema;
+	}
+
+	public Time getOpen() {
+		return open;
+	}
+
+	public void setOpen(Time open) {
+		this.open = open;
+	}
+
+	public Time getClose() {
+		return close;
+	}
+
+	public void setClose(Time close) {
+		this.close = close;
 	}
 
 	public void cinemaFeel2() {

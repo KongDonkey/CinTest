@@ -30,6 +30,14 @@ public class Seance implements Comparable<Seance>{
 		return seance;
 	}
 
+	public int getIdSeance() {
+		return idSeance;
+	}
+
+	public void setIdSeance(int idSeance) {
+		this.idSeance = idSeance;
+	}
+
 	public void setSeance(Seance seance) {
 		this.seance = seance;
 	}
